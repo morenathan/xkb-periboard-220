@@ -1,0 +1,43 @@
+default xkb_geometry "periboard-220" {
+
+    description= "Perixx Periboard 220";
+    width= 397;
+    height= 147;
+
+    shape.cornerRadius= 1;
+    shape "NORM" { { [ 19,19] }, { [2,1], [ 16,16] } };
+    shape "BKSP" { { [ 38,19] }, { [2,1], [ 36,16] } };
+    shape "RTRN" { { [ 41,19] }, { [2,1], [ 39,16] } };
+    shape "TABK" { { [ 29,19] }, { [2,1], [ 27,16] } };
+    shape "BKSL" { { [ 29,19] }, { [2,1], [ 27,16] } };
+    shape "CAPS" { { [ 32,19] }, { [2,1], [ 30,16] } };
+    shape "LSFT" { { [ 45,19] }, { [2,1], [ 43,16] } };
+    shape "RSFT" { { [ 32,19] }, { [2,1], [ 30,16] } };
+    shape "SPCK" { { [ 95,19] }, { [2,1], [ 93,16] } };
+    shape "FKEY" { { [ 19,12] }, { [2,1], [ 17,10] } };
+    
+    Section "Main" {
+        top=26;
+        left=3;
+        
+        row {
+            top=1;
+            key.shape="FKEY";
+            key.gap=1;
+            keys { 
+                <ESC>, <FK01>, <FK02>, <FK03>, <FK04>, <FK05>,
+                <FK06>, <FK07>, <FK08>, <FK09>, <FK10>, <FK11>,
+                <FK12>, <PRSC>, <SCLK>, <PAUS>, <DELE> 
+            };
+        };
+        
+        row {
+            top=21;
+            key.shape="NORM";
+            key.gap=1
+            keys {
+                { <TAB>, "TABK" }
+            };
+        };
+    };
+};

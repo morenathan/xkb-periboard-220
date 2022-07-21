@@ -1,0 +1,8 @@
+#!/bin/bash
+
+lkbfile="$(dirname $0)/symbols/perixx"
+rkbfile="/usr/share/X11/xkb/symbols/perixx"
+
+if [[ "$lkbfile" -nt "$rkbfile" || ! -e "$rkbfile" ]]; then
+    sudo cp -v "$lkbfile" "$rkbfile"
+fi
