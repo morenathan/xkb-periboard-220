@@ -1,3 +1,8 @@
+// Copying and distribution of this file, with or without modification,
+// are permitted in any medium without royalty provided the copyright
+// notice and this notice are preserved.  This file is offered as-is,
+// without any warranty.
+
 default partial alphanumeric_keys modifier_keys
 xkb_symbols "periboard-220" {
     // Row #01 -- Starting from the top
@@ -131,8 +136,12 @@ xkb_symbols "periboard-220" {
 
 xkb_symbols "periboard-220-personal" {
     include "perixx(periboard-220)"
-    include "compose(menu)"
     
-    override key <CAPS>  {[ Control_L ]};
-    override key <LCTL>  {[ Hyper_L ]};
+    replace key <CAPS>  {[ Control_L, Control_L ]};
+    replace key <LCTL>  {[ Hyper_L, Hyper_L ]};
+    replace key <MENU>  {[ Multi_key, Multi_key ]};
+    
+    modifier_map Control { <CAPS>, <RCTL> };
+    modifier_map Mod3 { <LCTL> };
+    modifier_map Mod5 { <MENU> };
 };

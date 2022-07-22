@@ -1,0 +1,135 @@
+// translation from evdev scancodes to something resembling xfree86 keycodes.
+
+default xkb_keycodes "periboard-220" {
+	minimum = 8;
+	maximum = 255;
+
+	<ESC> = 9;
+	<FK01> = 67;
+	<FK02> = 68;
+	<FK03> = 69;
+	<FK04> = 70;
+	<FK05> = 71;
+	<FK06> = 72;
+	<FK07> = 73;
+	<FK08> = 74;
+	<FK09> = 75;
+	<FK10> = 76;
+	<FK11> = 95;
+	<FK12> = 96;
+	<PRSC> = 107;
+	<SCLK> = 78;
+	<PAUS> = 127;
+	<DELE> = 119;
+	<INS>  = 118;
+
+	<TLDE> = 49;
+	<AE01> = 10;
+	<AE02> = 11;
+	<AE03> = 12;
+	<AE04> = 13;
+	<AE05> = 14;
+	<AE06> = 15;
+	<AE07> = 16;
+	<AE08> = 17;
+	<AE09> = 18;
+	<AE10> = 19;
+	<AE11> = 20;
+	<AE12> = 21;
+	<BKSP> = 22;
+	<HOME> = 110;
+
+	<TAB>  = 23;
+	<AD01> = 24;        alias <LatQ> = <AD01>;
+	<AD02> = 25;        alias <LatW> = <AD02>;
+	<AD03> = 26;        alias <LatE> = <AD03>;
+	<AD04> = 27;        alias <LatR> = <AD04>;
+	<AD05> = 28;        alias <LatT> = <AD05>;
+	<AD06> = 29;        alias <LatY> = <AD06>;
+	<AD07> = 30;        alias <LatU> = <AD07>;
+	<AD08> = 31;        alias <LatI> = <AD08>;
+	<AD09> = 32;        alias <LatO> = <AD09>;
+	<AD10> = 33;        alias <LatP> = <AD10>;
+	<AD11> = 34;        alias <LBKT> = <AD11>;
+	<AD12> = 35;        alias <RBKT> = <AD12>;
+	<BKSL> = 51;
+	<PGUP> = 112;
+
+	<CAPS> = 66;
+	<AC01> = 38;        alias <LatA> = <AC01>;
+	<AC02> = 39;        alias <LatS> = <AC02>;
+	<AC03> = 40;        alias <LatD> = <AC03>;
+	<AC04> = 41;        alias <LatF> = <AC04>;
+	<AC05> = 42;        alias <LatG> = <AC05>;
+	<AC06> = 43;        alias <LatH> = <AC06>;
+	<AC07> = 44;        alias <LatJ> = <AC07>;
+	<AC08> = 45;        alias <LatK> = <AC08>;
+	<AC09> = 46;        alias <LatL> = <AC09>;
+	<AC10> = 47;        alias <SEMI> = <AC10>;
+	<AC11> = 48;        alias <QUOT> = <AC11>;
+	<RTRN> = 36;
+	<PGDN> = 117;
+
+	<LFSH> = 50;
+	<AB01> = 52;        alias <LatZ> = <AB01>;
+    <AB02> = 53;        alias <LatX> = <AB02>;
+	<AB03> = 54;        alias <LatC> = <AB03>;
+	<AB04> = 55;        alias <LatV> = <AB04>;
+	<AB05> = 56;        alias <LatB> = <AB05>;
+	<AB06> = 57;        alias <LatN> = <AB06>;
+	<AB07> = 58;        alias <LatM> = <AB07>;
+	<AB08> = 59;        alias <COMA> = <AB08>;
+	<AB09> = 60;        alias <PERD> = <AB09>;
+	<AB10> = 61;        alias <FOSL> = <AB10>;
+	<RTSH> = 62;
+	<UP>   = 111;
+	<END>  = 115;
+
+	<LCTL> = 37;
+	<LWIN> = 133;
+	<LALT> = 64;
+	<SPCE> = 65;
+	<ALGR> = 108;
+	<RWIN> = 134;
+	<MENU> = 135;
+	<RCTL> = 105;
+	<LEFT> = 113;
+	<DOWN> = 116;
+	<RGHT> = 114;
+
+// Keypad
+	<NMLK> = 77;
+	<KPDV> = 106;
+	<KPMU> = 63;
+	<KPSU> = 82;
+
+	<KP7>  = 79;
+	<KP8>  = 80;
+	<KP9>  = 81;
+	<KPAD> = 86;
+
+	<KP4> = 83;
+	<KP5> = 84;
+	<KP6> = 85;
+
+	<KP1>  = 87;
+	<KP2>  = 88;
+	<KP3>  = 89;
+	<KPEN> = 104;
+
+	<KP0>  = 90;
+	<KPDL> = 91;
+	<KPEQ> = 125;
+
+// Fake keycodes for virtual keys
+	<LVL3> = 92;
+	<MDSW> = 203;
+	<ALT>  = 204;
+	<META> = 205;
+	<SUPR> = 206;
+	<HYPR> = 207;
+
+	indicator 1 = "Caps Lock";
+	indicator 2 = "Num Lock";
+	indicator 3 = "Scroll Lock";
+};
