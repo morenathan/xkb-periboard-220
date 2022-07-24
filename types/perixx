@@ -1,0 +1,127 @@
+default xkb_types "periboard-220" {
+
+    // Fairly standard definitions for
+    // three of the four required key types.
+    // The fourth type "KEYPAD" is defined in the "numpad" file.
+
+    virtual_modifiers Alt;
+    virtual_modifiers NumLock;
+    virtual_modifiers LevelThree;
+
+    type "ONE_LEVEL" {
+        modifiers = None;
+        map[None] = Level1;
+        level_name[Level1]= "Any";
+    };
+
+    type "TWO_LEVEL" {
+        modifiers = Shift;
+        map[Shift] = Level2;
+        level_name[Level1] = "Base";
+        level_name[Level2] = "Shift";
+    };
+
+    type "PC_CONTROL_LEVEL2" {
+        modifiers = Control;
+        map[None] = Level1;
+        map[Control] = Level2;
+        level_name[Level1] = "Base";
+        level_name[Level2] = "Control";
+    };
+
+    type "PC_ALT_LEVEL2" {
+        modifiers = Alt;
+        map[None] = Level1;
+        map[Alt] = Level2;
+        level_name[Level1] = "Base";
+        level_name[Level2] = "Alt";
+    };
+
+    type "PC_SUPER_LEVEL2" {
+        modifiers = Mod4;
+        map[None] = Level1;
+        map[Mod4] = Level2;
+        level_name[Level1] = "Base";
+        level_name[Level2] = "Super";
+    };
+
+    type "ALPHABETIC" {
+        modifiers = Shift+Lock;
+        map[Shift] = Level2;
+        map[Lock] = Level2;
+        level_name[Level1] = "Base";
+        level_name[Level2] = "Caps";
+    };
+
+    type "KEYPAD" {
+        modifiers = None;
+        map[None] = Level2;
+        level_name[Level2] = "Number";
+    };
+
+    type "FOUR_LEVEL_KEYPAD" {
+        modifiers = Shift+NumLock+LevelThree;
+        map[None] = Level1;
+        map[Shift] = Level2;
+        map[NumLock] = Level2;
+        map[Shift+NumLock] = Level1;
+        map[LevelThree] = Level3;
+        map[Shift+LevelThree] = Level4;
+        map[NumLock+LevelThree] = Level4;
+        map[Shift+NumLock+LevelThree] = Level3;
+        level_name[Level1] = "Base";
+        level_name[Level2] = "Number";
+        level_name[Level3] = "Alt Base";
+        level_name[Level4] = "Alt Number";
+    };
+
+    type "CTRL+ALT" {
+        modifiers = Control+Alt+Shift+LevelThree;
+        map[None] = Level1;
+        map[Shift] = Level2;
+        map[LevelThree] = Level3;
+        map[Shift+LevelThree] = Level4;
+        map[Control+Alt] = Level5;
+        preserve[Shift] = Shift;
+        preserve[Shift+LevelThree] = Shift;
+        level_name[Level1] = "Base";
+        level_name[Level2] = "Shift";
+        level_name[Level3] = "Alt Base";
+        level_name[Level4] = "Shift Alt";
+        level_name[Level5] = "Ctrl+Alt";
+    };
+
+    type "LOCAL_EIGHT_LEVEL" {
+        modifiers = Shift+Lock+LevelThree+Control;
+
+        map[None] = Level1;
+        map[Lock+Shift] = Level1;
+        map[Shift] = Level2;
+        map[Lock] = Level2;
+
+        map[LevelThree] = Level3;
+        map[Lock+Shift+LevelThree] = Level3;
+        map[Shift+LevelThree] = Level4;
+        map[Lock+LevelThree] = Level4;
+
+        map[Control] = Level5;
+        map[Lock+Shift+Control] = Level5;
+        map[Shift+Control] = Level6;
+        map[Lock+Control] = Level6;
+
+        map[LevelThree+Control] = Level7;
+        map[Lock+Shift+LevelThree+Control] = Level7;
+        map[Shift+LevelThree+Control] = Level8;
+        map[Lock+LevelThree+Control] = Level8;
+
+        level_name[Level1] = "Base";
+        level_name[Level2] = "Shift";
+        level_name[Level3] = "Level3";
+        level_name[Level4] = "Shift Level3";
+        level_name[Level5] = "Ctrl";
+        level_name[Level6] = "Shift Ctrl";
+        level_name[Level7] = "Level3 Ctrl";
+        level_name[Level8] = "Shift Level3 Ctrl";
+    };
+
+};
