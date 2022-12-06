@@ -24,7 +24,7 @@ xkb_symbols "periboard-220" {
     key <PAUS>  {[ Pause, Break ], type="PC_CONTROL_LEVEL2" };
     key <INS>   {[ Insert ]};
     key <DELE>  {[ Delete ]};
-    
+
     // Row #02
     key <TLDE>	{[ grave,               asciitilde,                 NoSymbol ]};
     key <AE01>	{[ 1,                   exclam,                     NoSymbol ]};
@@ -113,7 +113,7 @@ xkb_symbols "periboard-220" {
     key <KPDV>  {[ KP_Divide,           KP_Divide                            ]};
     key <KPMU>  {[ KP_Multiply,         KP_Multiply                          ]};
     key <KPSU>  {[ KP_Subtract,         KP_Subtract                          ]};
-    
+
     key <KP7>   {[ KP_Home,             KP_7                                 ]};
     key <KP8>   {[ KP_Up,               KP_8                                 ]};
     key <KP9>   {[ KP_Prior,            KP_9                                 ]};
@@ -136,11 +136,11 @@ xkb_symbols "periboard-220" {
 
 xkb_symbols "periboard-220-personal" {
     include "perixx(periboard-220)"
-    
+
     replace key <CAPS>  {[ Control_L, Control_L ]};
     replace key <LCTL>  {[ Hyper_L, Hyper_L ]};
     replace key <MENU>  {[ Multi_key, Multi_key ]};
-    
+
     modifier_map Control { <CAPS>, <RCTL> };
     modifier_map Mod3 { <LCTL> };
     modifier_map Mod5 { <MENU> };

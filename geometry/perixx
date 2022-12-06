@@ -20,22 +20,22 @@ default xkb_geometry "periboard-220" {
     shape "RSFT" { { [ 32,19] }, { [2,1], [ 30,16] } };
     shape "SPCK" { { [ 95,19] }, { [2,1], [ 93,16] } };
     shape "FKEY" { { [ 19,12] }, { [2,1], [ 17,10] } };
-    
+
     Section "Main" {
         top=26;
         left=3;
-        
+
         row {
             top=1;
             key.shape="FKEY";
             key.gap=1;
-            keys { 
+            keys {
                 <ESC>, <FK01>, <FK02>, <FK03>, <FK04>, <FK05>,
                 <FK06>, <FK07>, <FK08>, <FK09>, <FK10>, <FK11>,
-                <FK12>, <PRSC>, <SCLK>, <PAUS>, <DELE> 
+                <FK12>, <PRSC>, <SCLK>, <PAUS>, <DELE>
             };
         };
-        
+
         row {
             top=21;
             key.shape="NORM";
